@@ -62,7 +62,7 @@ if __name__ == "__main__":
     foundEigenvalues = lam
     biggestFoundEigenvalue = lam[-1]
     print("Gefundener größter Eigenwert für A:", biggestFoundEigenvalue)
-    print("Gefunde Eigenwerte:",foundEigenvalues)#gefundene Eigenwerte von linalg
+    print("Gefunde Eigenwerte:",richtig)#gefundene Eigenwerte von linalg
     x,y = PlotEigenvalueDifference(biggestFoundEigenvalue, foundEigenvalues)
     axs[0,0].plot(x,y)
     lam, V = inv_veciter(A, -4, eps) #inverse methode
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     x,y = PlotEigenvalueDifference(biggestFoundEigenvalue, foundEigenvalues)
     axs[1,0].plot(x,y)
     print("Größter gefundener Eigenwert für B:",biggestFoundEigenvalue)
-    print("Gefundene Eigenwerte:", foundEigenvalues)
+    print("Gefundene Eigenwerte:", richtig)
     lam, V = inv_veciter(B, 4, eps)
     print("Größter gefundener Eigenwert mit Inverser Methode:",biggestFoundEigenvalue)
     foundEigenvalues = lam
